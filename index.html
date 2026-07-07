@@ -13,7 +13,8 @@
   <link rel="canonical" href="https://www.fruchtfreunde.info" />
 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet" />
 
@@ -723,12 +724,43 @@
     }
 
     /* RESPONSIVE */
+    .nav-wa {
+      color: #25D366 !important;
+      font-weight: 600 !important;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed;
+      bottom: 1.8rem;
+      right: 1.8rem;
+      z-index: 999;
+      background: #25D366;
+      color: #fff;
+      border-radius: 100px;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+    }
+
     @media (max-width: 768px) {
-      nav ul { display: none; }
-      .mehrwert-inner { grid-template-columns: 1fr; }
-      .mehrwert-visual { aspect-ratio: auto; padding: 3rem; }
-      .team-grid { grid-template-columns: 1fr; }
-      .pakete-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+      .wa-float span.wa-label { display: none; }
+      .wa-float { padding: 1rem; border-radius: 50%; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -746,7 +778,8 @@
       <li><a href="#leistungen">Leistungen</a></li>
       <li><a href="#pakete">Pakete & Preise</a></li>
       <li><a href="#team">Team</a></li>
-      <li><a href="https://www.bnp-eventservice.de/anfrage" class="nav-cta">Anfrage stellen</a></li>
+      <li><a href="https://wa.me/4917596523824" target="_blank" class="nav-wa">WhatsApp</a></li>
+      <li><a href="mailto:steven@fruchtfreunde.info" class="nav-cta">Anfrage stellen</a></li>
     </ul>
   </nav>
 
@@ -762,7 +795,11 @@
       <h1>Frische, die <em>hängen bleibt.</em></h1>
       <p class="hero-sub">Wir bringen live zubereitete Smoothies auf Ihr Event – als Erlebnis mit echtem Mehrwert. Messe, Firmenfeier, Gesundheitstag: Ihre Gäste trinken nicht nur – sie nehmen etwas mit.</p>
       <div class="hero-actions">
-        <a href="https://www.bnp-eventservice.de/anfrage" class="btn-primary">Unverbindlich anfragen</a>
+        <a href="mailto:steven@fruchtfreunde.info" class="btn-primary">Jetzt anfragen</a>
+        <a href="https://wa.me/4917596523824" target="_blank" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
         <a href="#pakete" class="btn-secondary">Pakete ansehen</a>
       </div>
     </div>
@@ -1017,7 +1054,7 @@
             <div class="paket-gesamt">1.000 €</div>
             <div class="paket-stueck">5,00 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new">
@@ -1035,7 +1072,7 @@
             <div class="paket-gesamt">1.200 €</div>
             <div class="paket-stueck">4,00 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new featured-new">
@@ -1054,7 +1091,7 @@
             <div class="paket-gesamt">1.400 €</div>
             <div class="paket-stueck">3,50 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new">
@@ -1072,7 +1109,7 @@
             <div class="paket-gesamt">1.500 €</div>
             <div class="paket-stueck">3,00 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new">
@@ -1090,7 +1127,7 @@
             <div class="paket-gesamt">1.875 €</div>
             <div class="paket-stueck">2,50 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new">
@@ -1108,7 +1145,7 @@
             <div class="paket-gesamt">2.000 €</div>
             <div class="paket-stueck">2,00 € pro Smoothie</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Jetzt anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Jetzt anfragen</a>
         </div>
 
         <div class="paket-card-new paket-individuell">
@@ -1123,7 +1160,7 @@
             <div class="paket-gesamt" style="font-size:1.3rem; color: rgba(255,255,255,0.4);">Auf Anfrage</div>
             <div class="paket-stueck">Wir erstellen Ihnen gerne ein maßgeschneidertes Angebot</div>
           </div>
-          <a href="https://www.bnp-eventservice.de/anfrage" class="paket-cta-new">Angebot anfragen</a>
+          <a href="mailto:steven@fruchtfreunde.info" class="paket-cta-new">Angebot anfragen</a>
         </div>
 
       </div>
@@ -1195,15 +1232,34 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
+  <!-- CTA / KONTAKT -->
+  <section class="cta-section" id="kontakt">
     <div class="section-inner" style="text-align:center">
-      <p class="section-eyebrow" style="color:var(--green-light)">Bereit für mehr?</p>
-      <h2 class="section-title">Ihr nächstes Event verdient<br>mehr als Standard.</h2>
-      <p class="section-lead">Schreiben Sie uns – wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Angebot zurück.</p>
-      <a href="https://www.bnp-eventservice.de/anfrage" class="btn-primary">Jetzt unverbindlich anfragen</a>
+      <p class="section-eyebrow" style="color:var(--green-light)">Bereit loszulegen?</p>
+      <h2 class="section-title">Schreiben Sie uns – wir antworten schnell.</h2>
+      <p class="section-lead" style="margin:0 auto 2.5rem;">Ob Frage, Paketanfrage oder ein großes individuelles Event – wir sind per E-Mail und WhatsApp für Sie erreichbar. Kein Formular, kein Umweg.</p>
+
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;">
+        <a href="mailto:steven@fruchtfreunde.info" class="btn-primary" style="background:var(--yellow);color:#2a1515;font-weight:600;">
+          E-Mail schreiben
+        </a>
+        <a href="https://wa.me/4917596523824" target="_blank" class="btn-primary" style="background:#25D366;color:#fff;font-weight:600;display:flex;align-items:center;gap:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <p style="color:rgba(255,255,255,0.45);font-size:0.88rem;">
+        steven@fruchtfreunde.info &nbsp;·&nbsp; +49 175 9652382
+      </p>
     </div>
   </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/4917596523824" target="_blank" class="wa-float" aria-label="WhatsApp Kontakt">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-label">Jetzt auf WhatsApp</span>
+  </a>
 
   <!-- BNP NOTE -->
   <div style="background:#f5f0f0; padding: 2.5rem; text-align:center; border-top: 1px solid rgba(240,90,87,0.12);">
@@ -1221,9 +1277,10 @@
     <span class="footer-logo"><img src="logo.png" alt="Fruchtfreunde Catering" style="height:60px;width:auto;filter:brightness(0) invert(1);opacity:0.85;" /></span>
     <p>Ein Konzept von <a href="https://www.bnp-eventservice.de">BNP Eventservice</a> · Bochum, NRW</p>
     <div class="footer-links" style="margin-top:1rem">
+      <a href="mailto:steven@fruchtfreunde.info">steven@fruchtfreunde.info</a>
+      <a href="https://wa.me/4917596523824" target="_blank">WhatsApp</a>
       <a href="https://www.bnp-eventservice.de/impressum">Impressum</a>
       <a href="https://www.bnp-eventservice.de/datenschutz">Datenschutz</a>
-      <a href="https://www.bnp-eventservice.de/anfrage">Kontakt</a>
     </div>
     <p style="margin-top:1.5rem;font-size:0.75rem">© 2025 Fruchtfreunde · Ein Teil von BNP Eventservice GbR</p>
   </footer>
