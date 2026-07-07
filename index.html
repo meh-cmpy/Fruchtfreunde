@@ -759,8 +759,89 @@
     }
 
     @media (max-width: 768px) {
+      /* WhatsApp float */
       .wa-float span.wa-label { display: none; }
-      .wa-float { padding: 1rem; border-radius: 50%; }
+      .wa-float { padding: 1rem; border-radius: 50%; bottom: 1.2rem; right: 1.2rem; }
+
+      /* NAV */
+      nav { padding: 1rem 1.2rem; }
+      nav ul { display: none; }
+      nav::after {
+        content: '';
+      }
+
+      /* Mobile nav - show only CTA */
+      nav ul { 
+        display: flex;
+        gap: 0.6rem;
+      }
+      nav ul li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+      nav ul li:nth-last-child(2) { display: none; }
+      .nav-cta { padding: 0.45rem 1rem; font-size: 0.82rem; }
+
+      /* HERO */
+      .hero { padding: 6rem 1.4rem 4rem; min-height: 90vh; }
+      .hero-content img { height: 80px !important; margin-bottom: 1.4rem !important; }
+      .hero h1 { font-size: 2.4rem; }
+      .hero-sub { font-size: 0.98rem; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 0.8rem; }
+      .btn-primary, .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.95rem; }
+      .hero-eyebrow { font-size: 0.72rem; }
+
+      /* STATS */
+      .stats { padding: 2rem 1.2rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+      .stat-num { font-size: 2rem; }
+      .stat-label { font-size: 0.78rem; }
+
+      /* SECTIONS allgemein */
+      section { padding: 3.5rem 1.4rem; }
+      .section-title { font-size: 1.7rem; }
+      .section-lead { font-size: 0.98rem; }
+
+      /* USP GRID */
+      .usp-grid { grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+      .usp-card { padding: 1.4rem; }
+
+      /* EVENTS */
+      .events-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1.8rem; }
+      .event-chip { font-size: 0.82rem; padding: 0.75rem 0.9rem; }
+
+      /* MEHRWERT */
+      .mehrwert-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mehrwert-visual { aspect-ratio: 4/3; padding: 2rem; }
+      .mehrwert-visual img { width: 45% !important; }
+      .mehrwert-list li { font-size: 0.9rem; }
+
+      /* PAKETE */
+      .pakete-section { padding: 3.5rem 1.2rem; }
+      .pakete-grid-new { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 2rem; }
+      .paket-card-new { padding: 1.5rem; }
+      .paket-menge { font-size: 2rem !important; }
+      .paket-inhalte { margin: 1rem 0 1.2rem; }
+      .paket-gesamt { font-size: 1.7rem !important; }
+
+      /* INBEGRIFFEN */
+      .inbegriffen-cols { grid-template-columns: 1fr; gap: 0.8rem; }
+      .ib-item { padding: 1rem 1.2rem; }
+      .ib-item p { font-size: 0.88rem; }
+
+      /* TEAM */
+      .team-section { padding: 3.5rem 1.4rem; }
+      .team-grid { grid-template-columns: 1fr !important; max-width: 100% !important; gap: 1rem; }
+      .team-card { padding: 1.4rem; }
+
+      /* CTA */
+      .cta-section { padding: 3.5rem 1.4rem; }
+      .cta-section .section-title { font-size: 1.7rem; }
+      .cta-section > div > div { flex-direction: column; align-items: center; }
+      .cta-section a.btn-primary { width: 100%; text-align: center; justify-content: center; box-sizing: border-box; }
+
+      /* FOOTER */
+      footer { padding: 2rem 1.4rem; }
+      footer img { height: 70px !important; }
+      .footer-links { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+      .footer-links a { margin: 0; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -910,7 +991,7 @@
         </ul>
       </div>
       <div class="mehrwert-visual">
-        <img src="logo.png" alt="Fruchtfreunde" style="width:35%;height:auto;filter:brightness(0) invert(1);position:relative;z-index:1;" />
+        <img src="logo.png" alt="Fruchtfreunde" style="width:55%;height:auto;filter:brightness(0) invert(1);position:relative;z-index:1;" />
       </div>
     </div>
   </section>
